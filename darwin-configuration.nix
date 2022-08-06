@@ -22,12 +22,14 @@
   system.stateVersion = 4;
 
   # Dan's Configurations
+  networking.computerName = "stolen";
   system.defaults.dock.autohide = true;
   system.defaults.dock.show-process-indicators = false;
   system.defaults.dock.show-recents = false;
   system.defaults.dock.static-only = true;
   system.defaults.finder.AppleShowAllExtensions = true;
   system.defaults.finder.ShowPathbar = true;
+  # system.defaults.NSGlobalDomain.com.apple.mouse.tapBehavior = 1; ### broken in Monterey
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
 
