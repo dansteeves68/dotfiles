@@ -21,10 +21,21 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
-  # Added by Dan 2022-08-06
+  # Dan's Configurations
+  system.defaults.dock.autohide = true;
+  system.defaults.dock.show-process-indicators = false;
+  system.defaults.dock.show-recents = false;
+  system.defaults.dock.static-only = true;
+  system.defaults.finder.AppleShowAllExtensions = true;
+  system.defaults.finder.ShowPathbar = true;
+  system.keyboard.enableKeyMapping = true;
+  system.keyboard.remapCapsLockToEscape = true;
+
+  # Added by Dan 2022-08-06 per Nix Darwin instructions
   homebrew = {
     enable = true;
     casks = [ 
+      "iterm2"
       "marked" 
       "netnewswire" 
       "sublime-text" 
@@ -49,6 +60,10 @@
       inetutils
       pandoc
       python3
+    ];
+
+    home.sessionPath = [
+      "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
     ];
 
     home.stateVersion = "22.05";
