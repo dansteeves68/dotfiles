@@ -29,14 +29,15 @@
   system.defaults.dock.static-only = true;
   system.defaults.finder.AppleShowAllExtensions = true;
   system.defaults.finder.ShowPathbar = true;
-  # system.defaults.NSGlobalDomain.com.apple.mouse.tapBehavior = 1; ### broken in Monterey
+  # TODO system.defaults.NSGlobalDomain.com.apple.mouse.tapBehavior = 1; ### broken in Monterey
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
 
   # Added by Dan 2022-08-06 per Nix Darwin instructions
   homebrew = {
     enable = true;
-    casks = [ 
+    casks = [
+      "discord"
       "iterm2"
       "marked" 
       "netnewswire" 
@@ -44,6 +45,8 @@
       "tower"
     ];
     cleanup = "zap";
+    # TODO masApps = { Moom = NNNN, ... };
+    # mdfind kMDItemAppStoreHasReceipt=1 to list current
   };
 
   # Added by Dan 2022-08-06 per Home Manager instructions
