@@ -81,7 +81,7 @@
 
     programs.vim = {
       enable = true;
-      plugins = with pkgs.vimPlugins; [ neovim-sensible python-syntax vim-nix ];
+      plugins = with pkgs.vimPlugins; [ python-syntax vim-monokai vim-nix ];
     };
 
     programs.zsh = {
