@@ -1,9 +1,16 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, host ? "stolen", user ? "c079373", ... }:
+let
+  python-with-global-packages = pkgs.python3.withPackages (
+    ps: with ps; [ 
+      pandas
+      pytest
+    ]
+  );
+in
 {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = [ ];
+  environment.systemPackages = [ python-with-global-packages ];
 
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
@@ -22,7 +29,11 @@
   system.stateVersion = 4;
 
   # Dan's Configurations
-  networking.computerName = "stolen";
+  environment.shellAliases = {
+    vi = "nvim";
+    vim = "nvim";
+  };
+  # networking.computerName = ;
   system.defaults.dock.autohide = true;
   system.defaults.dock.show-process-indicators = false;
   system.defaults.dock.show-recents = false;
@@ -51,20 +62,20 @@
 
   # Added by Dan 2022-08-06 per Home Manager instructions
   imports = [ <home-manager/nix-darwin> ];
-  
-  users.users.dan = {
-    name = "dan";
-    home = "/Users/dan";
-  };
 
-  home-manager.users.dan = { pkgs, ... }: {
+  users.users.c079373 = {
+      name = "c079373";
+      home = "/Users/c079373";
+    };
+
+  home-manager.users.c079373 = { pkgs, ... }: {
     home.packages = with pkgs; [ 
       awscli2
       black
       dotfiles
       inetutils
       pandoc
-      python3
+      ripgrep
     ];
 
     home.sessionPath = [
@@ -76,12 +87,12 @@
     programs.git = {
       enable = true;
       userName = "Dan Steeves";
-      userEmail = "dan@thesteeves.org";
+      userEmail = "dansteeves@thrivent.com";
     };
 
-    programs.vim = {
+    programs.neovim = {
       enable = true;
-      plugins = with pkgs.vimPlugins; [ neovim-sensible python-syntax vim-nix ];
+      plugins = with pkgs.vimPlugins; [ python-syntax vim-nix ];
     };
 
     programs.zsh = {
