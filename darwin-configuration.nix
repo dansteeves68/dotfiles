@@ -6,6 +6,8 @@ let
       pytest
     ]
   );
+  user = builtins.getEnv "USER";
+  emailAddress = if user == "dan" then "dan@thesteeves.org" else "dan.steeves@thrivent.com";
 in
 {
   # List packages installed in system profile. To search by name, run:
@@ -57,7 +59,7 @@ in
       "sublime-text" 
       "tower"
     ];
-    cleanup = "zap";
+    cleanup = "none";
     # TODO masApps = { Moom = NNNN, ... };
     # mdfind kMDItemAppStoreHasReceipt=1 to list current
   };
@@ -65,12 +67,12 @@ in
   # Added by Dan 2022-08-06 per Home Manager instructions
   imports = [ <home-manager/nix-darwin> ];
 
-  users.users.dan = {
-      name = "dan";
-      home = "/Users/dan";
+  users.users.${user} = {
+      name = user;
+      home = "/Users/${user}";
     };
 
-  home-manager.users.dan = { pkgs, ... }: {
+  home-manager.users.${user} = { pkgs, ... }: {
     home.packages = with pkgs; [ 
       awscli2
       black
@@ -90,7 +92,7 @@ in
     programs.git = {
       enable = true;
       userName = "Dan Steeves";
-      userEmail = "dan@thesteeves.org";
+      userEmail = emailAddress;
     };
 
     programs.neovim = {
