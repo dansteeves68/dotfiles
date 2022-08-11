@@ -74,6 +74,7 @@ in
       black
       dotfiles
       inetutils
+      nixfmt
       pandoc
       ripgrep
     ];
@@ -87,7 +88,7 @@ in
     programs.git = {
       enable = true;
       userName = "Dan Steeves";
-      userEmail = "dansteeves@thrivent.com";
+      userEmail = "dan.steeves@thrivent.com";
     };
 
     programs.neovim = {
