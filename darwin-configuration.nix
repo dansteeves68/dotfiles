@@ -90,9 +90,9 @@ in
       userEmail = "dan@thesteeves.org";
     };
 
-    programs.vim = {
+    programs.neovim = {
       enable = true;
-      plugins = with pkgs.vimPlugins; [ python-syntax vim-monokai vim-nix ];
+      plugins = with pkgs.vimPlugins; [ python-syntax vim-lastplace vim-nix ];
     };
 
     programs.zsh = {
