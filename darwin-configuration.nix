@@ -12,10 +12,6 @@ in
   # $ nix-env -qaP | grep wget
   environment.systemPackages = [ python-with-global-packages ];
 
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages = [ ];
-
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
@@ -33,7 +29,11 @@ in
   system.stateVersion = 4;
 
   # Dan's Configurations
-  networking.computerName = "stolen";
+  environment.shellAliases = {
+    vi = "nvim";
+    vim = "nvim";
+  };
+  # networking.computerName = ;
   system.defaults.dock.autohide = true;
   system.defaults.dock.show-process-indicators = false;
   system.defaults.dock.show-recents = false;
@@ -51,7 +51,9 @@ in
       "discord"
       "iterm2"
       "marked" 
-      "netnewswire" 
+      "netnewswire"
+      "onepassword"
+      "onepassword-cli"
       "sublime-text" 
       "tower"
     ];
@@ -62,11 +64,11 @@ in
 
   # Added by Dan 2022-08-06 per Home Manager instructions
   imports = [ <home-manager/nix-darwin> ];
-  
+
   users.users.dan = {
-    name = "dan";
-    home = "/Users/dan";
-  };
+      name = "dan";
+      home = "/Users/dan";
+    };
 
   home-manager.users.dan = { pkgs, ... }: {
     home.packages = with pkgs; [ 
@@ -74,8 +76,9 @@ in
       black
       dotfiles
       inetutils
+      nixfmt
       pandoc
-      python3
+      ripgrep
     ];
 
     home.sessionPath = [
