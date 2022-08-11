@@ -92,7 +92,7 @@ in
 
     programs.neovim = {
       enable = true;
-      plugins = with pkgs.vimPlugins; [ python-syntax vim-nix ];
+      plugins = with pkgs.vimPlugins; [ python-syntax vim-lastplace vim-nix ];
     };
 
     programs.zsh = {
