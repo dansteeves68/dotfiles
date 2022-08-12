@@ -48,6 +48,8 @@ in
   homebrew = {
     enable = true;
     casks = [
+      "1password"
+      "1password-cli"
       "discord"
       "iterm2"
       "marked" 
