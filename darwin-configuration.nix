@@ -1,13 +1,11 @@
-{ config, pkgs, host ? "stolen", user ? "c079373", ... }:
+{ config, pkgs, ... }:
 let
-  python-with-global-packages = pkgs.python3.withPackages (
-    ps: with ps; [ 
-      pandas
-      pytest
-    ]
-  );
-in
-{
+  python-with-global-packages =
+    pkgs.python3.withPackages (ps: with ps; [ pandas pytest ]);
+  user = builtins.getEnv "USER";
+  emailAddress =
+    if user == "dan" then "dan@thesteeves.org" else "dan.steeves@thrivent.com";
+in {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = [ python-with-global-packages ];
@@ -21,7 +19,7 @@ in
   # nix.package = pkgs.nix;
 
   # Create /etc/bashrc that loads the nix-darwin environment.
-  programs.zsh.enable = true;  # default shell on catalina
+  programs.zsh.enable = true; # default shell on catalina
   # programs.fish.enable = true;
 
   # Used for backwards compatibility, please read the changelog before changing.
@@ -52,12 +50,12 @@ in
       "1password-cli"
       "discord"
       "iterm2"
-      "marked" 
-      "netnewswire" 
-      "sublime-text" 
+      "marked"
+      "netnewswire"
+      "sublime-text"
       "tower"
     ];
-    cleanup = "zap";
+    cleanup = "none";
     # TODO masApps = { Moom = NNNN, ... };
     # mdfind kMDItemAppStoreHasReceipt=1 to list current
   };
@@ -65,13 +63,13 @@ in
   # Added by Dan 2022-08-06 per Home Manager instructions
   imports = [ <home-manager/nix-darwin> ];
 
-  users.users.c079373 = {
-      name = "c079373";
-      home = "/Users/c079373";
-    };
+  users.users.${user} = {
+    name = user;
+    home = "/Users/${user}";
+  };
 
-  home-manager.users.c079373 = { pkgs, ... }: {
-    home.packages = with pkgs; [ 
+  home-manager.users.${user} = { pkgs, ... }: {
+    home.packages = with pkgs; [
       awscli2
       black
       dotfiles
@@ -81,16 +79,15 @@ in
       ripgrep
     ];
 
-    home.sessionPath = [
-      "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
-    ];
+    home.sessionPath =
+      [ "/Applications/Sublime Text.app/Contents/SharedSupport/bin" ];
 
     home.stateVersion = "22.05";
 
     programs.git = {
       enable = true;
       userName = "Dan Steeves";
-      userEmail = "dan.steeves@thrivent.com";
+      userEmail = emailAddress;
     };
 
     programs.neovim = {
