@@ -72,8 +72,6 @@ in {
     home.packages = with pkgs; [
       awscli2
       black
-      dotfiles
-      inetutils
       nixfmt
       pandoc
       ripgrep
@@ -99,7 +97,7 @@ in {
       enable = true;
       oh-my-zsh = {
         enable = true;
-        plugins = [ "vi-mode" "ssh-agent" ];
+        plugins = [ "ssh-agent" ];
         theme = "robbyrussell";
       };
     };
