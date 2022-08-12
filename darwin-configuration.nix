@@ -97,7 +97,7 @@ in {
       enable = true;
       oh-my-zsh = {
         enable = true;
-        plugins = [ "ssh-agent" ];
+        plugins = [ "ripgrep" "ssh-agent" "vi-mode" ];
         theme = "robbyrussell";
       };
     };
