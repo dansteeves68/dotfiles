@@ -10,6 +10,10 @@ in {
   # $ nix-env -qaP | grep wget
   environment.systemPackages = [ python-with-global-packages ];
 
+  # Added 2022-08-13 by Dan
+  fonts.fontDir.enable = true;
+  fonts.fonts = with pkgs; [ anonymousPro ];
+
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
@@ -69,13 +73,7 @@ in {
   };
 
   home-manager.users.${user} = { pkgs, ... }: {
-    home.packages = with pkgs; [
-      awscli2
-      black
-      nixfmt
-      pandoc
-      ripgrep
-    ];
+    home.packages = with pkgs; [ awscli2 black nixfmt pandoc ripgrep ];
 
     home.sessionPath =
       [ "/Applications/Sublime Text.app/Contents/SharedSupport/bin" ];
