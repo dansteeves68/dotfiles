@@ -44,7 +44,7 @@ in {
   # networking.computerName = ;
 
   system.defaults.dock.autohide = true;
-  system.defaults.dock.show-process-indicators = false;
+  system.defaults.dock.show-process-indicators = true;
   system.defaults.dock.show-recents = false;
   system.defaults.dock.static-only = true;
 
