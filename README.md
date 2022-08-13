@@ -2,27 +2,30 @@
 
 Thanks to [nix-darwin](https://github.com/LnL7/nix-darwin), many things are in one file.
 
-## Links
+## Nix, Nix Darwin, and Home Manager
 
-Links are managed manually for now.
+After installing nix, nix-darwin, and homebrew, link this file to manage everything.
 
 `ln -s ~/dotfiles/darwin-configuration.nix ~/.nixpkgs/darwin-configuration.nix`
 
+## iTerm2
 
-## Bootstrap a new Mac
+After installing iTerm2 (via homebrew via nix-darwin) use the Preferences -> General -> Preferences dialog to point the configuration at `~/dotfiles/iTerm2`.
 
-After first time, this is my best guess at repeating the bootstrap.
+(I do not use the iTerm2 password features, but if I did would they be in there?)
 
-- Install nix
-- Install nix-darwin
-- Install homebrew
-- Clone repo into `~/dotfiles`
-- Set up links
+## Sublime Text
 
-Want to avoid installing manually things that will be controlled by config. Probably could edit the original config by hand with repo contents, then run. Then use installed tools to get repo and set up links.
+After installing Sublime Text (via homebrew via nix-darwin) link the user packages and settings to the directory here:
+
+
+```
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+rm -r User
+ln -s ~/dotfiles/Sublime/User
+```
 
 ## Todo
 
 - Sublime Text packages and settings
-- iTerm2 settings
 - Oh-my-zsh prompt - want two lines with date/time

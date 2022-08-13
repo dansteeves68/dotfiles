@@ -1,0 +1,22 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"CFG Configuration Syntax Highlighting",
+		"Configify",
+		"CSV",
+		"Makefile Plus",
+		"Markdown Extended",
+		"MarkdownEditing",
+		"Marked App Menu",
+		"Nix",
+		"Package Control",
+		"python-black",
+		"rainbow_csv",
+		"Theme - Monokai Pro",
+		"TOML",
+	],
+	"in_process_packages":
+	[
+	],
+}
