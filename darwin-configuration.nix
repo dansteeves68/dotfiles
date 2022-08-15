@@ -29,7 +29,7 @@ in {
     casks = [
       "1password"
       "1password-cli"
-      "discord"
+      # "discord"
       "iterm2"
       "marked"
       "netnewswire"
