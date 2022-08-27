@@ -1,5 +1,8 @@
 {
-  description = "Malo’s Nix system configs, and some other useful stuff.";
+  description = ''
+    Dan's Nix, nix-darwin, and home-manager configurations.
+    Based on Malo's at https://github.com/malob/nixpkgs. Kudos and thank you!
+  '';
 
   inputs = {
     # Package sets
