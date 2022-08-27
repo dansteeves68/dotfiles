@@ -124,8 +124,8 @@
           modules = nixDarwinCommonModules ++ [
             {
               users.primaryUser = workUserInfo;
-              networking.computerName = "stolen";
-              networking.hostName = "stolen";
+              networking.computerName = "LN7YNX3G7";
+              networking.hostName = "LN7YNX3G7";
               networking.knownNetworkServices = [
                 "Wi-Fi"
                 "USB 10/100/1000 LAN"
