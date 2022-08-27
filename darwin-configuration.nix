@@ -7,10 +7,6 @@ let
     if user == "dan" then "dan@thesteeves.org" else "dan.steeves@thrivent.com";
 in {
   # Do Not Change nix-darwin
-  programs.zsh.enable = true;
-  services.nix-daemon.enable = true;
-  system.stateVersion = 4;
-  # End Do Not Change nix-darwin
 
   #
   # Dan's nix-darwin
@@ -21,8 +17,6 @@ in {
   };
   environment.systemPackages = [ python-with-global-packages ];
 
-  fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [ anonymousPro ];
 
   homebrew = {
     enable = true;
@@ -45,24 +39,24 @@ in {
 
   # networking.computerName = ;
 
-  system.defaults.dock.autohide = true;
-  system.defaults.dock.autohide-delay = "0.5";
-  system.defaults.dock.autohide-time-modifier = "1.0";
-  system.defaults.dock.launchanim = false;
-  system.defaults.dock.mineffect = null;
-  system.defaults.dock.show-process-indicators = true;
-  system.defaults.dock.show-recents = false;
-  system.defaults.dock.static-only = false;
-  system.defaults.dock.wvous-tl-corner = 4;
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
-  system.defaults.finder.AppleShowAllExtensions = true;
-  system.defaults.finder.AppleShowAllFiles = true;
-  system.defaults.finder.CreateDesktop = false; # Whether to show icons on the desktop or not.
-  system.defaults.finder.ShowPathbar = true;
-  system.defaults.finder.ShowStatusBar = false;
-  system.defaults.finder.QuitMenuItem = true;
 
-  system.defaults.screencapture.location = "~/Screenshots/";
+
+
+
+
+
+
+  
 
   # TODO system.defaults.NSGlobalDomain.com.apple.mouse.tapBehavior = 1; ### broken in Monterey
 
