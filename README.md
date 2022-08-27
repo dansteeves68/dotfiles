@@ -8,6 +8,21 @@ After installing nix, nix-darwin, and homebrew, link this file to manage everyth
 
 `ln -s ~/dotfiles/darwin-configuration.nix ~/.nixpkgs/darwin-configuration.nix`
 
+To build and switch:
+
+```shell
+darwin-rebuild switch
+```
+
+## Flakes
+
+To build and switch:
+
+```shell
+nix build .#darwinConfigurations.stolen.system
+./result/sw/bin/darwin-rebuild switch --flake .#stolen
+```
+
 ## iTerm2
 
 After installing iTerm2 (via homebrew via nix-darwin) use the Preferences -> General -> Preferences dialog to point the configuration at `~/dotfiles/iTerm2`.
