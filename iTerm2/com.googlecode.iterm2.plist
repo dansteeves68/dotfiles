@@ -8,10 +8,6 @@
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
-	<key>NeverWarnAboutShortLivedSessions_D28E0CCB-8225-4699-90F0-042136186558</key>
-	<true/>
-	<key>NeverWarnAboutShortLivedSessions_D28E0CCB-8225-4699-90F0-042136186558_selection</key>
-	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -541,7 +537,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>AnonymousPro 18</string>
+			<string>AnonymousPro 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
