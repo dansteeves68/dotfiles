@@ -46,11 +46,18 @@
 
       homeManagerStateVersion = "22.11";
 
-      primaryUserInfo = {
+      personalUserInfo = {
         username = "dan";
         fullName = "Dan Steeves";
         email = "dan@thesteeves.org";
         nixConfigDirectory = "/Users/dan/dotfiles";
+      };
+
+      workUserInfo = {
+        username = "c079373";
+        fullName = "Dan Steeves";
+        email = "dan.steeves@thrivent.com";
+        nixConfigDirectory = "/Users/c079373/dotfiles";
       };
 
       # Modules shared by most `nix-darwin` personal configurations.
@@ -101,7 +108,22 @@
           system = "x86_64-darwin";
           modules = nixDarwinCommonModules ++ [
             {
-              users.primaryUser = primaryUserInfo;
+              users.primaryUser = personalUserInfo;
+              networking.computerName = "stolen";
+              networking.hostName = "stolen";
+              networking.knownNetworkServices = [
+                "Wi-Fi"
+                "USB 10/100/1000 LAN"
+              ];
+            }
+          ];
+        };
+
+        LN7YNX3G7 = darwinSystem {
+          system = "aarch64-darwin";
+          modules = nixDarwinCommonModules ++ [
+            {
+              users.primaryUser = workUserInfo;
               networking.computerName = "stolen";
               networking.hostName = "stolen";
               networking.knownNetworkServices = [
@@ -117,7 +139,7 @@
           system = "x86_64-darwin";
           modules = nixDarwinCommonModules ++ [
             ({ lib, ... }: {
-              users.primaryUser = primaryUserInfo // {
+              users.primaryUser = personalUserInfo // {
                 username = "runner";
                 nixConfigDirectory = "/Users/runner/work/nixpkgs/nixpkgs";
               };
@@ -126,25 +148,6 @@
           ];
         };
       };
-
-      # Config I use with Linux cloud VMs
-      # Build and activate on new system with:
-      # `nix build .#homeConfigurations.malo.activationPackage; ./result/activate`
-      homeConfigurations.malo = home-manager.lib.homeManagerConfiguration {
-        pkgs = import inputs.nixpkgs-unstable {
-          system = "x86_64-linux";
-          inherit (nixpkgsConfig) config overlays;
-        };
-        modules = attrValues self.homeManagerModules ++ singleton ({ config, ...}: {
-          home.username = config.home.user-info.username;
-          home.homeDirectory = "/home/${config.home.username}";
-          home.stateVersion = homeManagerStateVersion;
-          home.user-info = primaryUserInfo // {
-            nixConfigDirectory = "${config.home.homeDirectory}/.config/nixpkgs";
-          };
-        });
-      };
-      # }}}
 
       # Non-system outputs --------------------------------------------------------------------- {{{
 
