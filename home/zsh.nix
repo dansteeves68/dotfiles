@@ -7,9 +7,8 @@ in {
     enable = true;
     oh-my-zsh = {
       enable = true;
-      plugins = [ "fzf" "ripgrep" "ssh-agent" "vi-mode" ];
+      plugins = [ "ripgrep" "ssh-agent" "vi-mode" ];
       theme = "amuse";
     };
   };
-
 }

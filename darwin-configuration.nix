@@ -96,6 +96,7 @@ in {
         plugins = [ "ripgrep" "ssh-agent" "vi-mode" ];
         theme = "amuse";
       };
+      
     };
   };
 }
