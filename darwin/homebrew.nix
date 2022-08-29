@@ -88,6 +88,7 @@ in {
     "marked"
     "netnewswire"
     "omnifocus"
+    "omnigraffle"
     "sublime-text"
     "tower"
     # "amethyst"
