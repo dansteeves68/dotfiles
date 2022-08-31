@@ -35,7 +35,7 @@
     show-process-indicators = true;
     show-recents = false;
     static-only = false;
-    tilesize = 128;
+    # tilesize = 128;
     wvous-bl-corner = 1;
     wvous-br-corner = 1;
     wvous-tl-corner = 4;
