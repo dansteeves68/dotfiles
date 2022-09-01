@@ -81,6 +81,7 @@ in {
   homebrew.casks = [
     "1password"
     "1password-cli"
+    "alfred"
     "cardhop"
     "fantastical"
     # "discord"
@@ -88,6 +89,7 @@ in {
     "marked"
     "netnewswire"
     "omnifocus"
+    "omnigraffle"
     "sublime-text"
     "tower"
     # "amethyst"
