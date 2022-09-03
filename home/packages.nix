@@ -70,4 +70,7 @@
       m-cli # useful macOS CLI commands
       prefmanager # tool for working with macOS defaults
     ];
+
+  home.sessionPath =
+    [ "/Applications/Sublime Text.app/Contents/SharedSupport/bin" ];
 }
