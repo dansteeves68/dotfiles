@@ -58,7 +58,7 @@ in {
     # Keynote = 409183694;
     # "LG Screen Manager" = 1142051783;
     # MindNode = 1289197285;
-    # Numbers = 409203825;
+    Numbers = 409203825;
     # Pages = 409201541;
     # Patterns = 429449079;
     # "Pixelmator Classic" = 407963104;
@@ -90,6 +90,7 @@ in {
     "netnewswire"
     "omnifocus"
     "omnigraffle"
+    "soulver"
     "sublime-text"
     "tower"
     # "amethyst"
