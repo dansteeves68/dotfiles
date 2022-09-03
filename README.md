@@ -23,6 +23,10 @@ nix build .#darwinConfigurations.stolen.system
 ./result/sw/bin/darwin-rebuild switch --flake .#stolen
 ```
 
+## Alfred
+
+After homebrew installs Alfred, open Alfred, enter license powerpack, then use Settings -> Advanced -> Set preferences folder... to point at ~/dotfiles/Alfred.
+
 ## iTerm2
 
 After installing iTerm2 (via homebrew via nix-darwin) use the Preferences -> General -> Preferences dialog to point the configuration at `~/dotfiles/iTerm2`.
