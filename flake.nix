@@ -106,7 +106,6 @@
         };
         bootstrap-arm = bootstrap-x86.override { system = "aarch64-darwin"; };
 
-        # My Apple Silicon macOS laptop config
         stolen = darwinSystem {
           system = "x86_64-darwin";
           modules = nixDarwinCommonModules ++ [

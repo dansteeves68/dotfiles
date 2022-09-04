@@ -45,7 +45,7 @@ in {
   # https://github.com/malob/nixpkgs/issues/9
   homebrew.masApps = {
     # "1Password for Safari" = 1569813296;
-    "Numbers" = 409203825;
+    # "Numbers" = 409203825;
     "Pins for Pinboard" = 1547106997;
     # "1Blocker" = 1365531024;
     # "1Password" = 1333542190;
@@ -129,7 +129,10 @@ in {
     # "vlc"
     # "yubico-yubikey-manager"
     # "yubico-yubikey-personalization-gui"
-  ];
+  ] ++ (if config.networking.computerName == "stolen" then
+    [ "discord" ]
+  else
+    [ ]);
 
   # Configuration related to casks
   environment.variables.SSH_AUTH_SOCK = mkIfCaskPresent "1password-cli"
