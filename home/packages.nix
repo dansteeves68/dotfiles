@@ -34,6 +34,7 @@
       browsh # in terminal browser
       coreutils
       curl
+      docker-compose
       du-dust # fancy version of `du`
       exa # fancy version of `ls`
       fd # fancy version of `find`

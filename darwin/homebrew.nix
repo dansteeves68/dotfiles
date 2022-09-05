@@ -84,6 +84,7 @@ in {
     "1password-cli"
     "alfred"
     "cardhop"
+    "docker" # Docker Desktop - /Applications/Docker.app
     "fantastical"
     # "discord"
     "iterm2"
