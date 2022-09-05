@@ -25,11 +25,11 @@ nix build .#darwinConfigurations.stolen.system
 
 ## Alfred
 
-After homebrew installs Alfred, open Alfred, enter license powerpack, then use Settings -> Advanced -> Set preferences folder... to point at ~/dotfiles/Alfred.
+After homebrew installs Alfred, open Alfred, enter license powerpack, then use Settings -> Advanced -> Set preferences folder... to point at `~/dotfiles/Alfred/`.
 
 ## iTerm2
 
-After installing iTerm2 (via homebrew via nix-darwin) use the Preferences -> General -> Preferences dialog to point the configuration at `~/dotfiles/iTerm2`.
+After installing iTerm2 (via homebrew via nix-darwin) use the Preferences -> General -> Preferences dialog to point the configuration at `~/dotfiles/iTerm2/`.
 
 (I do not use the iTerm2 password features, but if I did would they be in there?)
 
@@ -46,5 +46,4 @@ ln -s ~/dotfiles/Sublime/User
 
 ## Todo
 
-- Sublime Text packages and settings
 - Oh-my-zsh prompt - want two lines with date/time
