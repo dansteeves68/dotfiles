@@ -5,7 +5,9 @@
 		"Markdown",
 		"Vintage",
 	],
-	"color_scheme": "Monokai Pro (Filter Machine).sublime-color-scheme",
-	"theme": "Monokai Pro (Filter Machine).sublime-theme",
-	"font_size": 21,
+	"color_scheme": "Monokai Pro (Filter Spectrum).sublime-color-scheme",
+	"theme": "Monokai Pro (Filter Spectrum).sublime-theme",
+	"font_size": 22,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
 }
