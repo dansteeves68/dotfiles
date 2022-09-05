@@ -4,10 +4,22 @@ let
   inherit (config.home.user-info) nixConfigDirectory;
 in {
   programs.zsh = {
+    autocd = true;
     enable = true;
+    enableAutosuggestions = true;
+    enableCompletion = true;
+    history = {
+      expireDuplicatesFirst = true;
+      extended = true;
+      ignoreDups = true;
+      ignorePatterns = [ ];
+      ignoreSpace = false;
+      save = 10000;
+      share = true;
+      size = 10000;
+    };
     prezto = {
-      enable =
-        true; # Whether to enable prezto. Type: boolean Default: false Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
+      enable = true;
       # autosuggestions.color = ; # Set the query found color. Type: null or string Default: null Example: "fg=blue" Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       caseSensitive =
         false; # Set case-sensitivity for completion, history lookup, etc. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
@@ -37,7 +49,7 @@ in {
         "prompt"
         "autosuggestions"
         "ssh"
-      ]; # Set the Prezto modules to load (browse modules). The order matters. Type: list of string Default: [ "environment" "terminal" "editor" "history" "directory" "spectrum" "utility" "completion" "prompt" ] Declared by: <home-manager/modules/programs/zsh/prezto.nix>
+      ];
       # prompt.pwdLength = ; # Set the working directory prompt display length. By default, it is set to 'short'. Set it to 'long' (without '~' expansion) for longer or 'full' (with '~' expansion) for even longer prompt display. Type: null or one of "short", "long", "full" Default: null Example: "short" Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # prompt.showReturnVal = ; # Set the prompt to display the return code along with an indicator for non-zero return codes. This is not supported by all prompts. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       prompt.theme =
