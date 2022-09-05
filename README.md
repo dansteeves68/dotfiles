@@ -19,9 +19,11 @@ darwin-rebuild switch
 To build and switch:
 
 ```shell
-nix build .#darwinConfigurations.stolen.system
-./result/sw/bin/darwin-rebuild switch --flake .#stolen
+nix build ".#darwinConfigurations.stolen.system"
+./result/sw/bin/darwin-rebuild switch --flake ".#stolen"
 ```
+
+Note: quoting the `.#...` references required when I set up prezto.
 
 ## Alfred
 
