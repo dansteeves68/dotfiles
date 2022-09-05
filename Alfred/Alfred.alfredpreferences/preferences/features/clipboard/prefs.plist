@@ -4,5 +4,11 @@
 <dict>
 	<key>fastAppend</key>
 	<true/>
+	<key>fastAppendBackToClipboard</key>
+	<true/>
+	<key>fastAppendSeparator</key>
+	<integer>1</integer>
+	<key>snippetKeyword</key>
+	<string>s</string>
 </dict>
 </plist>

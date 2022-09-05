@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "mkdir -p ~\/.ssh\nchmod 600 ~\/.ssh\ntouch ~\/.ssh\/authorized_keys\nchmod 700 ~\/.ssh\/authorized_keys\necho 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRdA+0l1+\/0RAY0JwzxsFPnzOWjWEz0hoeEYx8ldOYePAenFU13BJQrhvr\/TtCvZOs9mmedJg77ysxo2aP\/sbzrpduJoaweNic9Ndr8\/1JMRFyH66U0JrIsMTj+0eFhxiD3Nov9YGqv0uz+Q4dIEwlzsPYXmBFCBvYSIsxhh+M5tAYuNWpoA0TLsHVXjBhAy9ejQbQ85DFzhqW0yl\/mKhLFtAZ7S\/Av2l\/GBLNQu1mXr3HQe5+dKll+o0ZWC+j3s72cbZBnxSdPm3jgHldMOI\/aAz2DPk5WJZC5t8uEAuQkWZ+oMxvLNfGI9PUF8thPdU44zDZaChWwfQO8RCa0F1OzqD2sVe9Zk9pf+OmC2pr0UeNqDuM951RoTq3MLtW8Fic3dNNoLfTzSJm\/\/Lm\/+Owsc6kEJVt7GoUv2RDEIL824VN2mwgHSvHofzfia3TKF7Izxl77re\/5aXfCr8eN+7QBjlSQfchYnPF7hRmg23enxGZtPK3+SKuoU0L\/F3pd0M= c079373@LN7YNX3G7' > ~\/.ssh\/authorized_keys",
+    "uid" : "03F69C06-29AB-4C7B-9F58-FB7AB4CFD1CA",
+    "name" : "Authorized Keys",
+    "keyword" : "auth"
+  }
+}

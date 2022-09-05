@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "kafka_server_brokertopicmetrics_messagesin_total{job=\"kafka\",topic=\"{clipboard}\"}",
+    "uid" : "2EBAFC30-FFED-4D96-842C-B7D5BF24E376",
+    "name" : "Prometheus Query",
+    "keyword" : "pq"
+  }
+}
