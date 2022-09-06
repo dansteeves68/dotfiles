@@ -8,6 +8,7 @@ in {
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
+    defaultKeymap = "viins"; # emacs, vicmd, or viins
     history = {
       expireDuplicatesFirst = true;
       extended = true;
@@ -20,10 +21,10 @@ in {
     };
     prezto = {
       enable = true;
-      # autosuggestions.color = ; # Set the query found color. Type: null or string Default: null Example: "fg=blue" Declared by: <home-manager/modules/programs/zsh/prezto.nix>
+      autosuggestions.color = "fg=magenta"; # Set the query found color. Type: null or string Default: null Example: "fg=blue" Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       caseSensitive =
         false; # Set case-sensitivity for completion, history lookup, etc. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
-      # color = ; # Color output (auto set to 'no' on dumb terminals) Type: null or boolean Default: true Example: false Declared by: <home-manager/modules/programs/zsh/prezto.nix>
+      color = true; # Color output (auto set to 'no' on dumb terminals) Type: null or boolean Default: true Example: false Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # completions.ignoredHosts = ; # Set the entries to ignore in static */etc/hosts* for host completion. Type: list of string Default: [ ] Example: [ "0.0.0.0" "127.0.0.1" ] Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # editor.dotExpansion = ; # Auto convert .... to ../.. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       editor.keymap =
@@ -59,12 +60,11 @@ in {
       # ruby.chrubyAutoSwitch = ; # Auto switch the Ruby version on directory change. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # screen.autoStartLocal = ; # Auto start a session when Zsh is launched in a local terminal. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # screen.autoStartRemote = ; # Auto start a session when Zsh is launched in a SSH connection. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
-      # ssh.identities = ; # Set the SSH identities to load into the agent. Type: list of string Default: [ ] Example: [ "id_rsa" "id_rsa2" "id_github" ] Declared by: <home-manager/modules/programs/zsh/prezto.nix>
+      ssh.identities = [ "id_rsa" ];
       # syntaxHighlighting.highlighters = ; # Set syntax highlighters. By default, only the main highlighter is enabled. Type: list of string Default: [ ] Example: [ "main" "brackets" "pattern" "line" "cursor" "root" ] Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # syntaxHighlighting.pattern = ; # Set syntax pattern styles. Type: attribute set of string Default: { } Example: { rm*-rf* = "fg=white,bold,bg=red"; } Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # syntaxHighlighting.styles = ; # Set syntax highlighting styles. Type: attribute set of string Default: { } Example: { builtin = "bg=blue"; command = "bg=blue"; function = "bg=blue"; } Declared by: <home-manager/modules/programs/zsh/prezto.nix>
-      terminal.autoTitle =
-        true; # Auto set the tab and window titles. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
+      terminal.autoTitle = true;
       # terminal.multiplexerTitleFormat = ; # Set the multiplexer title format. Type: null or string Default: null Example: "%s" Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # terminal.tabTitleFormat = ; # Set the tab title format. Type: null or string Default: null Example: "%m: %s" Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # terminal.windowTitleFormat = ; # Set the window title format. Type: null or string Default: null Example: "%n@%m: %s" Declared by: <home-manager/modules/programs/zsh/prezto.nix>
