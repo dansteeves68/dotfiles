@@ -77,6 +77,4 @@
     Clicking = true; # true to enable tap-to-click
     TrackpadRightClick = true;
   };
-
-  system.defaults.NSGlobalDomain.com.apple.trackpad.scaling = 2.0; # 0 to 3 for trackpad speed
 }
