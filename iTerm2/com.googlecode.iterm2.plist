@@ -1138,6 +1138,8 @@
 	</dict>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>TimeBetweenTips</key>
+	<real>604800</real>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>kCPKSelectionViewPreferredModeKey</key>
