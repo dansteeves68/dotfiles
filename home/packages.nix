@@ -34,6 +34,7 @@
       browsh # in terminal browser
       coreutils
       curl
+      deadnix
       docker-compose
       du-dust # fancy version of `du`
       exa # fancy version of `ls`
