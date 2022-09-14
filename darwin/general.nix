@@ -1,13 +1,24 @@
 { pkgs, ... }:
 let
-  python-with-global-packages =
-    pkgs.python3.withPackages (ps: with ps; [ pandas pytest ]);
+  python-with-global-packages = pkgs.python3.withPackages (ps:
+    with ps; [
+      # for AWS assume role at work
+      beautifulsoup4
+      boto3
+      botocore
+      configparser
+      pandas
+      pytest
+      requests
+      requests-kerberos
+      urllib3
+    ]);
 in {
   # Prefer neovim to other variations
-  environment.shellAliases = {
-    vi = "nvim";
-    vim = "nvim";
-  };
+  # environment.shellAliases = {
+  # vi = "nvim";
+  # vim = "nvim";
+  # };
 
   # Apps
   # `home-manager` currently has issues adding them to `~/Applications`

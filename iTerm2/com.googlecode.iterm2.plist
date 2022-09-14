@@ -1138,10 +1138,10 @@
 	</dict>
 	<key>SoundForEsc</key>
 	<false/>
-	<key>TimeBetweenTips</key>
-	<real>604800</real>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

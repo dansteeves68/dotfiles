@@ -1,19 +1,34 @@
 { config, pkgs, lib, ... }:
 
 {
-  # Neovim
-  programs.neovim.enable = true;
-  programs.neovim.plugins = with pkgs.vimPlugins; [
-    lush-nvim
-    python-syntax
-    tabular
-    vim-commentary
-    vim-eunuch
-    vim-haskell-module-name
-    vim-lastplace
-    vim-nix
-    vim-surround
-  ];
+  programs.neovim = {
+    enable = true;
+    # package = "pkgs.neovim-unwrapped"; # default is neovim-unwrapped
+    # coc = {
+    # enable = true; package = "pkgs.vimPlugins.coc-nvim"; pluginConfig = ""; settings = {};
+    # };
+    # extraConfig = "";
+    # extraLuaPackages = [];
+    # extraPackages = [];
+    # generatedConfigs = {};
+    plugins = with pkgs.vimPlugins; [
+      lush-nvim
+      nvim-treesitter
+      python-syntax
+      tabular
+      telescope-nvim
+      vim-commentary
+      vim-eunuch
+      vim-haskell-module-name
+      vim-lastplace
+      vim-nix
+      vim-surround
+    ];
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+  };
+}
 
   # programs.neovim.extraPackages = with pkgs; [
   #   neovim-remote
@@ -34,4 +49,3 @@
   #   statix
   #   sumneko-lua-language-server
   # ];
-}

@@ -11,7 +11,7 @@
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
     ];
 
-    trusted-users = [ "@admin" ];
+    trusted-users = [ "@admin" "dan" "c079373" ];
 
     auto-optimise-store = true;
 
