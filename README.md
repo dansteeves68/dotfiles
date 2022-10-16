@@ -31,7 +31,7 @@ Use the Preferences -> General -> Preferences dialog to point the configuration 
 
 (I do not use the iTerm2 password features, but if I did would they be in there?)
 
-## Sublime Text
+### Sublime Text
 
 After installing Sublime Text (via homebrew via nix-darwin) link the user packages and settings to the directory here:
 
@@ -42,6 +42,14 @@ ln -s ~/dotfiles/Sublime/User
 ```
 
 Todo: Add link for preferences files
+
+### Moom
+
+Todo: Add link for preferences folder?
+
+## Preferences
+
+Remove apps from dock: `m dock prune`
 
 ## Maintenance
 
