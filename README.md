@@ -47,7 +47,9 @@ Todo: Add link for preferences files
 
 Todo: Add link for preferences folder?
 
-## Preferences
+## More Preferences and Setup
+
+Create folder `mkdir ~/Screenshots`
 
 Remove apps from dock: `m dock prune`
 

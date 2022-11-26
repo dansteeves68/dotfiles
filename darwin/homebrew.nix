@@ -47,7 +47,7 @@ in {
     # "1Password for Safari" = 1569813296;
     # "Numbers" = 409203825;
     # "Pins for Pinboard" = 1547106997;
-    "1Blocker" = 1365531024;
+    # "1Blocker" = 1365531024;
     # "1Password" = 1333542190;
     # "Accelerate for Safari" = 1459809092;
     # "Apple Configurator 2" = 1037126344;
@@ -62,6 +62,7 @@ in {
     # "WiFi Explorer" = 494803304;
     # "Yubico Authenticator" = 1497506650;
     # DaisyDisk = 411643860;
+    # "Day One" = 1055511498;
     # Deliveries = 290986013;
     # Fantastical = 975937182;
     # Keynote = 409183694;

@@ -36,6 +36,7 @@
       curl
       deadnix
       docker-compose
+      dockutil
       du-dust # fancy version of `du`
       exa # fancy version of `ls`
       fd # fancy version of `find`

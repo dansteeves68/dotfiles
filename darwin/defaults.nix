@@ -55,6 +55,7 @@
     AppleShowAllFiles = true;
     CreateDesktop = false; # Whether to show icons on the desktop or not.
     FXEnableExtensionChangeWarning = true;
+    FXPreferredViewStyle = "Nlsv";
     ShowPathbar = true;
     ShowStatusBar = false;
     QuitMenuItem = true;
