@@ -1,7 +1,7 @@
 {
   # What the hell is "NSGlobalDomain"?
   system.defaults.NSGlobalDomain = {
-    "com.apple.trackpad.scaling" = "3.0";
+    # "com.apple.trackpad.scaling" = 3.0;
     AppleInterfaceStyleSwitchesAutomatically = true;
     # AppleMeasurementUnits = "Centimeters";
     # AppleMetricUnits = 1;
@@ -27,8 +27,8 @@
   system.defaults.dock = {
     appswitcher-all-displays = false; # Whether to display the appswitcher on all displays or only the main one. The default is false.
     autohide = true;  # Whether to automatically hide and show the dock.
-    autohide-delay = "0.1";  # Sets the speed of the autohide delay. The default is 
-    autohide-time-modifier = "0.5";  # Sets the speed of the animation when hiding/showing the Dock. The default is given in the example.
+    autohide-delay = 0.1;  # Sets the speed of the autohide delay. The default is 
+    autohide-time-modifier = 0.5;  # Sets the speed of the animation when hiding/showing the Dock. The default is given in the example.
     dashboard-in-overlay = false; # Whether to hide Dashboard as a Space. The default is false.
     enable-spring-load-actions-on-all-items = false; # Enable spring loading for all Dock items. The default is false.
     expose-group-by-app = false; # Whether to group windows by application in Mission Control's Exposé. The default is true.

@@ -23,11 +23,17 @@ in {
   #   end
   # '';
 
+
+  # homebrew todo 2023-05-10:
+  # trace: warning: The option `homebrew.cleanup' defined in `<unknown-file>' has been renamed to `homebrew.onActivation.cleanup'.
+  # trace: warning: The option `homebrew.autoUpdate' defined in `<unknown-file>' has been renamed to `homebrew.onActivation.autoUpdate'.
+  # trace: warning: The `homebrew' module no longer upgrades outdated formulae and apps by default during `nix-darwin' system activation. To enable upgrading, set `homebrew.onActivation.upgrade = true'.
+
   homebrew.enable = true;
   homebrew.autoUpdate = true;
   homebrew.cleanup = "zap";
   homebrew.global.brewfile = true;
-  homebrew.global.noLock = true;
+  # homebrew.global.noLock = true; # gave error 2023-05-10
 
   homebrew.taps = [
     "homebrew/cask"
@@ -143,5 +149,5 @@ in {
 
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
   # installed in `../home/default.nix` whenever possible.
-  # homebrew.brews = [ "swift-format" "swiftlint" ];
+  homebrew.brews = [ "astro" ];
 }

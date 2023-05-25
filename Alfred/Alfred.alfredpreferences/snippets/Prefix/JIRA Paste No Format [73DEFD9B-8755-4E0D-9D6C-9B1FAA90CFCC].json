@@ -1,8 +1,0 @@
-{
-  "alfredsnippet" : {
-    "snippet" : "{noformat}\n{clipboard}\n{noformat}",
-    "uid" : "73DEFD9B-8755-4E0D-9D6C-9B1FAA90CFCC",
-    "name" : "JIRA Paste No Format",
-    "keyword" : "pnf"
-  }
-}
