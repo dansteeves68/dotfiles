@@ -32,6 +32,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>636B08EF-EED2-453E-B147-BAFFF42AD2A3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>576E8487-1B12-40D5-8EF7-5F9EE6437F4D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>69BF7EF3-C721-49C1-80E3-22635715641F</key>
 		<array>
 			<dict>
@@ -364,6 +377,50 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>databricksnpd</string>
+				<key>subtext</key>
+				<string>in Chrome Incognito Window</string>
+				<key>text</key>
+				<string>Databricks Non Prod</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>636B08EF-EED2-453E-B147-BAFFF42AD2A3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --incognito 'https://thrivent-data-office-cloud-non-prod.cloud.databricks.com/' -n</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>576E8487-1B12-40D5-8EF7-5F9EE6437F4D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -379,7 +436,7 @@
 		<key>11D5721D-E45C-4D45-82C8-2CC370002271</key>
 		<dict>
 			<key>xpos</key>
-			<real>270</real>
+			<real>265</real>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
@@ -396,6 +453,20 @@
 			<real>40</real>
 			<key>ypos</key>
 			<real>715</real>
+		</dict>
+		<key>576E8487-1B12-40D5-8EF7-5F9EE6437F4D</key>
+		<dict>
+			<key>xpos</key>
+			<real>255</real>
+			<key>ypos</key>
+			<real>885</real>
+		</dict>
+		<key>636B08EF-EED2-453E-B147-BAFFF42AD2A3</key>
+		<dict>
+			<key>xpos</key>
+			<real>45</real>
+			<key>ypos</key>
+			<real>880</real>
 		</dict>
 		<key>69BF7EF3-C721-49C1-80E3-22635715641F</key>
 		<dict>

@@ -6,13 +6,16 @@ let
       beautifulsoup4
       boto3
       botocore
+      build
       configparser
+      hvac
+      moto
       pandas
       pytest
       requests
       requests-kerberos
       urllib3
-    ]);
+    ] ++ [pkgs.python310Packages.databricks-cli]);
 in {
   # Prefer neovim to other variations
   # environment.shellAliases = {

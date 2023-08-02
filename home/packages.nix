@@ -33,6 +33,7 @@
       bottom # fancy version of `top` with ASCII graphs
       browsh # in terminal browser
       coreutils
+      csvkit
       curl
       deadnix
       docker-compose
@@ -53,6 +54,7 @@
       ripgrep # better version of `grep`
       somafm-cli
       tealdeer # rust implementation of `tldr`
+      terraform
       thefuck
       unrar # extract RAR archives
       wget

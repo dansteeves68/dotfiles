@@ -96,7 +96,7 @@ in {
     # "discord"
     "iterm2"
     "marked"
-    "moom"
+    # "moom"
     "netnewswire"
     "omnifocus"
     "omnigraffle"
