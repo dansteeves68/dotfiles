@@ -49,6 +49,7 @@
       kakoune
       mas # Mac App Store CLI
       # mosh # wrapper for `ssh` that better and not dropping connections # problems 2023-10-08
+      nil
       nodePackages.speed-test # nice speed-test tool
       pandoc
       parallel # runs commands in parallel

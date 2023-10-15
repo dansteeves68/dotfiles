@@ -28,8 +28,6 @@
 
   outputs = { self, darwin, home-manager, flake-utils, ... }@inputs:
     let
-      # Some building blocks ------------------------------------------------------------------- {{{
-
       inherit (darwin.lib) darwinSystem;
       inherit (inputs.nixpkgs-unstable.lib) attrValues makeOverridable optionalAttrs singleton;
 
@@ -95,8 +93,6 @@
     in
     {
 
-      # System outputs ------------------------------------------------------------------------- {{{
-
       # My `nix-darwin` configs
       darwinConfigurations = rec {
         # Mininal configurations to bootstrap systems
@@ -150,8 +146,6 @@
           ];
         };
       };
-
-      # Non-system outputs --------------------------------------------------------------------- {{{
 
       overlays = {
         # Overlays to add different versions `nixpkgs` into package set
@@ -263,4 +257,3 @@
       };
     });
 }
-# vim: foldmethod=marker

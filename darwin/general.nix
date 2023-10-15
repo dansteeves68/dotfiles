@@ -12,6 +12,7 @@ let
       moto
       pandas
       pytest
+      python-lsp-server
       requests
       requests-kerberos
       urllib3
