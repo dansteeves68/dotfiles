@@ -182,7 +182,6 @@
         dan-config-files = import ./home/config-files.nix;
         dan-zsh = import ./home/zsh.nix;
         dan-git = import ./home/git.nix;
-        dan-git-aliases = import ./home/git-aliases.nix;
         # dan-kitty = import ./home/kitty.nix;
         dan-neovim = import ./home/neovim.nix;
         dan-packages = import ./home/packages.nix;
