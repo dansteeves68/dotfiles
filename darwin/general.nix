@@ -16,26 +16,15 @@ let
       requests
       requests-kerberos
       urllib3
-    ] ++ [pkgs.python310Packages.databricks-cli]);
+    ] ++ [ pkgs.python310Packages.databricks-cli ]);
 in {
-  # Prefer neovim to other variations
-  # environment.shellAliases = {
-  # vi = "nvim";
-  # vim = "nvim";
-  # };
-
   # Apps
   # `home-manager` currently has issues adding them to `~/Applications`
   # Issue: https://github.com/nix-community/home-manager/issues/1341
   environment.systemPackages = with pkgs; [
-    kitty
     python-with-global-packages
     terminal-notifier
   ];
-  # https://github.com/nix-community/home-manager/issues/423
-  # environment.variables = {
-  #   TERMINFO_DIRS = "${pkgs.kitty.terminfo.outPath}/share/terminfo";
-  # };
 
   # Fonts
   fonts.fontDir.enable = true;

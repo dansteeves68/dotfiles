@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  # Nix configuration ------------------------------------------------------------------------------
-
   nix.settings = {
     substituters = [
       "https://cache.nixos.org/"
@@ -30,9 +28,6 @@
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
-
-
-  # Shells -----------------------------------------------------------------------------------------
 
   # Add shells installed by nix to /etc/shells file
   environment.shells = with pkgs; [
