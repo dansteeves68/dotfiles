@@ -33,28 +33,29 @@
       bottom # fancy version of `top` with ASCII graphs
       browsh # in terminal browser
       coreutils
-      csvkit
+      # csvkit # problems 2023-10-08
       curl
       deadnix
       docker-compose
       dockutil
       du-dust # fancy version of `du`
-      exa # fancy version of `ls`
+      eza # fancy version of `ls`
       fd # fancy version of `find`
+      helix
       htop # fancy version of `top`
       hyperfine # benchmarking tool
       jpegoptim
       jq
+      kakoune
       mas # Mac App Store CLI
-      mosh # wrapper for `ssh` that better and not dropping connections
+      # mosh # wrapper for `ssh` that better and not dropping connections # problems 2023-10-08
       nodePackages.speed-test # nice speed-test tool
       pandoc
       parallel # runs commands in parallel
       ripgrep
-      ripgrep # better version of `grep`
       somafm-cli
       tealdeer # rust implementation of `tldr`
-      terraform
+      # terraform
       thefuck
       unrar # extract RAR archives
       wget

@@ -30,8 +30,9 @@ in {
   # trace: warning: The `homebrew' module no longer upgrades outdated formulae and apps by default during `nix-darwin' system activation. To enable upgrading, set `homebrew.onActivation.upgrade = true'.
 
   homebrew.enable = true;
-  homebrew.autoUpdate = true;
-  homebrew.cleanup = "zap";
+  homebrew.onActivation.autoUpdate = true;
+  homebrew.onActivation.cleanup = "zap";
+  homebrew.onActivation.upgrade = true;
   homebrew.global.brewfile = true;
   # homebrew.global.noLock = true; # gave error 2023-05-10
 
@@ -95,6 +96,7 @@ in {
     "fantastical"
     # "discord"
     "iterm2"
+    "kitty"
     "marked"
     # "moom"
     "netnewswire"
