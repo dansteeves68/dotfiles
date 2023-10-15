@@ -19,10 +19,6 @@
     # Other sources
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
     flake-utils.url = "github:numtide/flake-utils";
-    prefmanager.url = "github:malob/prefmanager";
-    prefmanager.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    prefmanager.inputs.flake-compat.follows = "flake-compat";
-    prefmanager.inputs.flake-utils.follows = "flake-utils";
   };
 
   outputs = { self, darwin, home-manager, flake-utils, ... }@inputs:
@@ -151,10 +147,6 @@
             inherit (prev.stdenv) system;
             inherit (nixpkgsConfig) config;
           };
-        };
-
-        prefmanager = _: prev: {
-          prefmanager = inputs.prefmanager.packages.${prev.stdenv.system}.default;
         };
 
         # Overlay that adds various additional utility functions to `vimUtils`
