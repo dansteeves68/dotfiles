@@ -157,12 +157,6 @@
             inherit (nixpkgsConfig) config;
           };
         };
-
-        # Overlay to include node packages listed in `./pkgs/node-packages/package.json`
-        # Run `nix run my#nodePackages.node2nix -- -14` to update packages.
-        nodePackages = _: prev: {
-          nodePackages = prev.nodePackages // import ./pkgs/node-packages { pkgs = prev; };
-        };
       };
 
       darwinModules = {
@@ -207,7 +201,6 @@
           pkgs-master
           pkgs-stable
           apple-silicon
-          nodePackages
         ];
       };
     });
