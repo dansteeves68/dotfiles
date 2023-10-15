@@ -149,22 +149,6 @@
           };
         };
 
-        # Overlay that adds various additional utility functions to `vimUtils`
-        vimUtils = import ./overlays/vimUtils.nix;
-
-        # Overlay that adds some additional Neovim plugins
-        vimPlugins = final: prev:
-          let
-            inherit (self.overlays.vimUtils final prev) vimUtils;
-          in
-          {
-            vimPlugins = prev.vimPlugins.extend (_: _:
-              vimUtils.buildVimPluginsFromFlakeInputs inputs [
-                # Add flake input name here
-              ]
-            );
-          };
-
         # Overlay useful on Macs with Apple Silicon
         apple-silicon = _: prev: optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
           # Add access to x86 packages system is running Apple Silicon
@@ -189,8 +173,6 @@
         dan-homebrew = import ./darwin/homebrew.nix;
 
         # Modules I've created
-        # programs-nix-index = import ./modules/darwin/programs/nix-index.nix;
-        # security-pam = import ./modules/darwin/security/pam.nix;
         users-primaryUser = import ./modules/darwin/users.nix;
       };
 
