@@ -2,8 +2,6 @@
 
 {
   # Bat, a substitute for cat.
-  # https://github.com/sharkdp/bat
-  # https://rycee.gitlab.io/home-manager/options.html#opt-programs.bat.enable
   programs.bat.enable = true;
   programs.bat.config = { style = "plain"; };
 
@@ -49,6 +47,7 @@
       kakoune
       mas # Mac App Store CLI
       # mosh # wrapper for `ssh` that better and not dropping connections # problems 2023-10-08
+      nil
       nodePackages.speed-test # nice speed-test tool
       pandoc
       parallel # runs commands in parallel
@@ -73,9 +72,7 @@
       statix # lints and suggestions for the Nix programming language
 
     ] ++ lib.optionals stdenv.isDarwin [
-      cocoapods
       m-cli # useful macOS CLI commands
-      prefmanager # tool for working with macOS defaults
     ];
 
   home.sessionPath =
