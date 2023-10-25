@@ -52,7 +52,6 @@
       pandoc
       parallel # runs commands in parallel
       ripgrep
-      somafm-cli
       tealdeer # rust implementation of `tldr`
       # terraform
       thefuck

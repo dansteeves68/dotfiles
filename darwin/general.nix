@@ -16,7 +16,7 @@ let
       requests
       requests-kerberos
       urllib3
-    ] ++ [ pkgs.python310Packages.databricks-cli ]);
+    ] ++ [ pkgs.python3Packages.databricks-cli ]);
 in {
   # Apps
   # `home-manager` currently has issues adding them to `~/Applications`
