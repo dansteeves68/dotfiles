@@ -154,7 +154,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://sso.thrivent.com/oamfed/idp/initiatesso?providerid=AWS</string>
+				<string>https://launcher.myapps.microsoft.com/api/signin/0d99180e-a7cd-4673-934b-582ea9305bc3?tenantId=020546b9-ddfd-459b-89d1-12a53f27a5e2</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>

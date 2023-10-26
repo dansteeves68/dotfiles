@@ -11,6 +11,7 @@ let
       hvac
       moto
       pandas
+      pip
       pytest
       python-lsp-server
       requests

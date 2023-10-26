@@ -51,9 +51,10 @@
       nodePackages.speed-test # nice speed-test tool
       pandoc
       parallel # runs commands in parallel
+      poetry
       ripgrep
       tealdeer # rust implementation of `tldr`
-      # terraform
+      terraform
       thefuck
       unrar # extract RAR archives
       wget
