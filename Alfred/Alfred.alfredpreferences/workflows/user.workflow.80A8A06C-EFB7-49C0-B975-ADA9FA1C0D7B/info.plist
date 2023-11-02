@@ -6,19 +6,6 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
-		<key>11316665-2897-4184-8401-58408AB78125</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8AEC7B98-560E-4B7C-802B-11B9589BE796</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>15FB27E7-8B84-4288-9B2E-20C30A57FFB4</key>
 		<array>
 			<dict>
@@ -45,63 +32,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>69BF7EF3-C721-49C1-80E3-22635715641F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C4301DC9-BD60-4214-AD73-ECD0DF76AF4C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>6D3EE110-D4F6-478D-88CF-67290ACA9555</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>A77ED761-8033-4E4D-B395-829FBFEC66C1</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>11D5721D-E45C-4D45-82C8-2CC370002271</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>B58FBB99-1D52-40F3-83AA-3B794B3229FC</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8AEC7B98-560E-4B7C-802B-11B9589BE796</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>D707211E-718D-4BBD-8248-06699467E3A1</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8AEC7B98-560E-4B7C-802B-11B9589BE796</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -121,132 +56,6 @@
 	<string>Stupid Thrivent Logins</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>aws</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Thrivent AWS Console</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://launcher.myapps.microsoft.com/api/signin/0d99180e-a7cd-4673-934b-582ea9305bc3?tenantId=020546b9-ddfd-459b-89d1-12a53f27a5e2</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>11D5721D-E45C-4D45-82C8-2CC370002271</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>ark</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>CyberARK</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>D707211E-718D-4BBD-8248-06699467E3A1</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>cyber</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>CyberARK</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>11316665-2897-4184-8401-58408AB78125</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://pim.thrivent.com/PasswordVault/v10/logon/saml</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>8AEC7B98-560E-4B7C-802B-11B9589BE796</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>fire</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>CyberARK</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>B58FBB99-1D52-40F3-83AA-3B794B3229FC</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -297,39 +106,18 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>cyber-cloud</string>
+				<string>databricks</string>
 				<key>subtext</key>
-				<string></string>
+				<string>in Chrome Incognito Window</string>
 				<key>text</key>
-				<string>CyberARK Cloud</string>
+				<string>Databricks Prod</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>69BF7EF3-C721-49C1-80E3-22635715641F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>https://pamthrivent.cyberark.cloud/</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>C4301DC9-BD60-4214-AD73-ECD0DF76AF4C</string>
+			<string>15FB27E7-8B84-4288-9B2E-20C30A57FFB4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -355,27 +143,6 @@
 			<string>12006BB7-B104-4783-92C4-CC70F1A43806</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>databricks</string>
-				<key>subtext</key>
-				<string>in Chrome Incognito Window</string>
-				<key>text</key>
-				<string>Databricks Prod</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>15FB27E7-8B84-4288-9B2E-20C30A57FFB4</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -426,103 +193,47 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>11316665-2897-4184-8401-58408AB78125</key>
-		<dict>
-			<key>xpos</key>
-			<real>75</real>
-			<key>ypos</key>
-			<real>235</real>
-		</dict>
-		<key>11D5721D-E45C-4D45-82C8-2CC370002271</key>
-		<dict>
-			<key>xpos</key>
-			<real>265</real>
-			<key>ypos</key>
-			<real>50</real>
-		</dict>
 		<key>12006BB7-B104-4783-92C4-CC70F1A43806</key>
 		<dict>
 			<key>xpos</key>
-			<real>275</real>
+			<real>210</real>
 			<key>ypos</key>
-			<real>710</real>
+			<real>155</real>
 		</dict>
 		<key>15FB27E7-8B84-4288-9B2E-20C30A57FFB4</key>
 		<dict>
 			<key>xpos</key>
-			<real>40</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>715</real>
+			<real>155</real>
 		</dict>
 		<key>576E8487-1B12-40D5-8EF7-5F9EE6437F4D</key>
 		<dict>
 			<key>xpos</key>
-			<real>255</real>
+			<real>210</real>
 			<key>ypos</key>
-			<real>885</real>
+			<real>305</real>
 		</dict>
 		<key>636B08EF-EED2-453E-B147-BAFFF42AD2A3</key>
 		<dict>
 			<key>xpos</key>
-			<real>45</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>880</real>
-		</dict>
-		<key>69BF7EF3-C721-49C1-80E3-22635715641F</key>
-		<dict>
-			<key>xpos</key>
-			<real>70</real>
-			<key>ypos</key>
-			<real>585</real>
+			<real>305</real>
 		</dict>
 		<key>6D3EE110-D4F6-478D-88CF-67290ACA9555</key>
 		<dict>
 			<key>xpos</key>
-			<real>80</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>415</real>
-		</dict>
-		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
-		<dict>
-			<key>xpos</key>
-			<real>50</real>
-			<key>ypos</key>
-			<real>50</real>
-		</dict>
-		<key>8AEC7B98-560E-4B7C-802B-11B9589BE796</key>
-		<dict>
-			<key>xpos</key>
-			<real>295</real>
-			<key>ypos</key>
-			<real>245</real>
+			<real>15</real>
 		</dict>
 		<key>A77ED761-8033-4E4D-B395-829FBFEC66C1</key>
 		<dict>
 			<key>xpos</key>
-			<real>300</real>
+			<real>210</real>
 			<key>ypos</key>
-			<real>415</real>
-		</dict>
-		<key>B58FBB99-1D52-40F3-83AA-3B794B3229FC</key>
-		<dict>
-			<key>xpos</key>
-			<real>95</real>
-			<key>ypos</key>
-			<real>265</real>
-		</dict>
-		<key>C4301DC9-BD60-4214-AD73-ECD0DF76AF4C</key>
-		<dict>
-			<key>xpos</key>
-			<real>300</real>
-			<key>ypos</key>
-			<real>585</real>
-		</dict>
-		<key>D707211E-718D-4BBD-8248-06699467E3A1</key>
-		<dict>
-			<key>xpos</key>
-			<real>50</real>
-			<key>ypos</key>
-			<real>200</real>
+			<real>15</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

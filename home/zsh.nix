@@ -14,7 +14,7 @@ in {
       extended = true;
       ignoreDups = true;
       ignorePatterns = [ ];
-      ignoreSpace = false;
+      ignoreSpace = true;
       save = 10000;
       share = true;
       size = 10000;

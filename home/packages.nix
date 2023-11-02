@@ -52,6 +52,7 @@
       pandoc
       parallel # runs commands in parallel
       poetry
+      ranger
       ripgrep
       tealdeer # rust implementation of `tldr`
       terraform
