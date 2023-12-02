@@ -60,7 +60,7 @@ in {
     "iterm2"
     "kitty"
     "marked"
-    # "moom"
+    "moom"
     "netnewswire"
     "omnifocus"
     "omnigraffle"
