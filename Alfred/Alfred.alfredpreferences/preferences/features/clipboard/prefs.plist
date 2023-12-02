@@ -8,6 +8,8 @@
 	<true/>
 	<key>fastAppendSeparator</key>
 	<integer>1</integer>
+	<key>persistFor</key>
+	<integer>2</integer>
 	<key>snippetKeyword</key>
 	<string>s</string>
 </dict>
