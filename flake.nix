@@ -6,15 +6,17 @@
 
   inputs = {
     # Package sets
-    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-22.05-darwin";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nixos-stable.url = "github:NixOS/nixpkgs/nixos-22.05";
+    nixpkgs-master.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+    nixos-stable.url = "github:NixOS/nixpkgs/nixos-23.11";
 
     # Environment/system management
-    darwin.url = "github:LnL7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    home-manager.url = "github:nix-community/home-manager";
+    darwin.url = "github:LnL7/nix-darwin/master";
+    darwin.inputs.nixpkgs.follows = "nixpkgs-stable";
+    home-manager.url = "github:nix-community/home-manager/release-23.11";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs-stable";
+    
 
     # Other sources
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
@@ -40,7 +42,7 @@
         ];
       };
 
-      homeManagerStateVersion = "22.11";
+      homeManagerStateVersion = "23.11";
 
       personalUserInfo = {
         username = "dan";
@@ -104,21 +106,6 @@
               users.primaryUser = personalUserInfo;
               networking.computerName = "stolen";
               networking.hostName = "stolen";
-              networking.knownNetworkServices = [
-                "Wi-Fi"
-                "USB 10/100/1000 LAN"
-              ];
-            }
-          ];
-        };
-
-        LN7YNX3G7 = darwinSystem {
-          system = "aarch64-darwin";
-          modules = nixDarwinCommonModules ++ [
-            {
-              users.primaryUser = workUserInfo;
-              networking.computerName = "LN7YNX3G7";
-              networking.hostName = "LN7YNX3G7";
               networking.knownNetworkServices = [
                 "Wi-Fi"
                 "USB 10/100/1000 LAN"
