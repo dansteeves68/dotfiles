@@ -18,11 +18,8 @@ in {
   homebrew.global.lockfiles = true;
 
   homebrew.taps = [
-    "homebrew/cask"
-    "homebrew/cask-drivers"
     "homebrew/cask-fonts"
     "homebrew/cask-versions"
-    "homebrew/core"
     "homebrew/services"
     "nrlquaker/createzap"
   ];
@@ -55,18 +52,18 @@ in {
     "1password-cli"
     "alfred"
     "cardhop"
-    "docker" # Docker Desktop - /Applications/Docker.app
     "fantastical"
-    "iterm2"
     "kitty"
     "marked"
     "moom"
     "netnewswire"
-    "omnifocus"
     "omnigraffle"
+    "opencore-patcher"
+    "orion"
     "soulver"
-    "sublime-text"
     "tower"
+    "transmit"
+    "zoom"
     # "transmit"
     # "visual-studio-code"
     # "vlc"
