@@ -24,40 +24,41 @@
   home.packages = with pkgs;
     [
       # Some basics
-      abduco # lightweight session management
-      awscli2
-      bandwhich # display current network utilization by process
+      # abduco # lightweight session management
+      # awscli2
+      # bandwhich # display current network utilization by process
       black
-      bottom # fancy version of `top` with ASCII graphs
-      browsh # in terminal browser
+      # bottom # fancy version of `top` with ASCII graphs
+      # browsh # in terminal browser
       coreutils
       # csvkit # problems 2023-10-08
       curl
       deadnix
-      docker-compose
-      dockutil
-      du-dust # fancy version of `du`
-      eza # fancy version of `ls`
-      fd # fancy version of `find`
+      # docker-compose
+      # dockutil
+      # du-dust # fancy version of `du`
+      # eza # fancy version of `ls`
+      # fd # fancy version of `find`
       helix
       htop # fancy version of `top`
-      hyperfine # benchmarking tool
+      # hyperfine # benchmarking tool
       jpegoptim
       jq
-      kakoune
+      # kakoune
       mas # Mac App Store CLI
       # mosh # wrapper for `ssh` that better and not dropping connections # problems 2023-10-08
-      nil
-      nodePackages.speed-test # nice speed-test tool
+      # nil
+      # nodePackages.speed-test # nice speed-test tool
+      openssh
       pandoc
-      parallel # runs commands in parallel
+      # parallel # runs commands in parallel
       poetry
-      ranger
+      # ranger
       ripgrep
-      tealdeer # rust implementation of `tldr`
-      terraform
-      thefuck
-      unrar # extract RAR archives
+      # tealdeer # rust implementation of `tldr`
+      # terraform
+      # thefuck
+      # unrar # extract RAR archives
       wget
       xz # extract XZ archives
 
@@ -69,7 +70,7 @@
       nix-tree # interactively browse dependency graphs of Nix derivations
       nix-update # swiss-knife for updating nix packages
       nixpkgs-review # review pull-requests on nixpkgs
-      nodePackages.node2nix
+      # nodePackages.node2nix
       statix # lints and suggestions for the Nix programming language
 
     ] ++ lib.optionals stdenv.isDarwin [

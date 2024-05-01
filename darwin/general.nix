@@ -8,7 +8,7 @@ let
       botocore
       build
       configparser
-      hvac
+      # hvac
       moto
       pandas
       pip
