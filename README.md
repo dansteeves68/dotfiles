@@ -53,5 +53,6 @@ Note: quoting the `.#...` references required when I set up prezto.
 - Kitty configuration in nix
 - Helix configuration in nix
 - Kitty/Helix font
-- Test mac options like autohide dock
+- Done: Test mac options like autohide dock
+- Can I add Logitech options from brew?
 

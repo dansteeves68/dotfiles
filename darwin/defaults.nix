@@ -1,4 +1,11 @@
 {
+
+  system.activationScripts.postUserActivation.text = ''
+    # Following line should allow us to avoid a logout/login cycle
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    killall Dock
+  '';
+
   # What the hell is "NSGlobalDomain"?
   system.defaults.NSGlobalDomain = {
     # "com.apple.trackpad.scaling" = 3.0;
