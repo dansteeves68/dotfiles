@@ -31,6 +31,8 @@ I tried using home manager `programs.kitty` but was not able to get it launchabl
 
 For now just link to the config file `ln -s ~/.config/kitty ~/dotfiles/kitty`.
 
+Reminder: Edit config in kitty using Command-, and reload the config after using Ctrl-Cmd-,
+
 ### Moom
 
 Todo: Add link for preferences folder?
