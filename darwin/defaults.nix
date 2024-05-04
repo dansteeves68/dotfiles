@@ -48,7 +48,7 @@
     show-process-indicators = true;
     show-recents = false;
     showhidden = false; # Whether to make icons of hidden applications tranclucent. The default is false.
-    # static-only = true; # Show only open applications in the Dock
+    static-only = true; # Show only open applications in the Dock
     tilesize = 64; # Size of the icons in the dock. The default is 64.
     wvous-bl-corner = 1; # Hot corner action 1 Disabled
     wvous-br-corner = 1; # Hot corner action 1 Disabled
