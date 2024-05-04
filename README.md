@@ -25,6 +25,12 @@ Launch, login, install Safari extension, follow instructions. Set "Open Quick Ac
 
 Launch, enter license powerpack, grant permissions. Then use Settings -> Advanced -> Set preferences folder... to point at `~/dotfiles/Alfred/`.
 
+### Kitty
+
+I tried using home manager `programs.kitty` but was not able to get it launchable from Alfred. :(.
+
+For now just link to the config file `ln -s ~/.config/kitty ~/dotfiles/kitty`.
+
 ### Moom
 
 Todo: Add link for preferences folder?
