@@ -25,24 +25,6 @@ Launch, login, install Safari extension, follow instructions. Set "Open Quick Ac
 
 Launch, enter license powerpack, grant permissions. Then use Settings -> Advanced -> Set preferences folder... to point at `~/dotfiles/Alfred/`.
 
-### iTerm2
-
-Use the Preferences -> General -> Preferences dialog to point the configuration at `~/dotfiles/iTerm2/`.
-
-(I do not use the iTerm2 password features, but if I did would they be in there?)
-
-### Sublime Text
-
-After installing Sublime Text (via homebrew via nix-darwin) link the user packages and settings to the directory here:
-
-```
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-rm -r User
-ln -s ~/dotfiles/Sublime/User
-```
-
-Todo: Add link for preferences files
-
 ### Moom
 
 Todo: Add link for preferences folder?
@@ -67,3 +49,9 @@ Note: quoting the `.#...` references required when I set up prezto.
 ## Todo
 
 - Oh-my-zsh prompt - want two lines with date/time
+- Documentation for darwin options like home manager `man 5 configuration.nix`?
+- Kitty configuration in nix
+- Helix configuration in nix
+- Kitty/Helix font
+- Test mac options like autohide dock
+
