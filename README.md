@@ -35,7 +35,7 @@ Reminder: Edit config in kitty using Command-, and reload the config after using
 
 ### Helix
 
-Using programs.helix, but config via `ln -s ~/.config/helix ~/dotfiles/helix`. Mostly because for now
+Using helix from pkgs, but config via `ln -s ~/.config/helix ~/dotfiles/helix`. Mostly because for now
 I don't want the hassle of rebuilding as I build this out. Maybe move to nix params later.
 
 ### Moom

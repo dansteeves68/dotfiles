@@ -16,29 +16,30 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs-stable";
     home-manager.url = "github:nix-community/home-manager/release-23.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-stable";
-    
 
     # Other sources
-    flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
     flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = { self, darwin, home-manager, flake-utils, ... }@inputs:
     let
       inherit (darwin.lib) darwinSystem;
-      inherit (inputs.nixpkgs-unstable.lib) attrValues makeOverridable optionalAttrs singleton;
+      inherit (inputs.nixpkgs-unstable.lib)
+        attrValues makeOverridable optionalAttrs singleton;
 
       # Configuration for `nixpkgs`
       nixpkgsConfig = {
-        config = {
-          allowUnfree = true;
-        };
+        config = { allowUnfree = true; };
         overlays = attrValues self.overlays ++ [
           # Sub in x86 version of packages that don't build on Apple Silicon yet
-          (final: prev: (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
-            inherit (final.pkgs-x86)
-              idris2;
-          }))
+          (final: prev:
+            (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
+              inherit (final.pkgs-x86) idris2;
+            }))
         ];
       };
 
@@ -62,18 +63,16 @@
       nixDarwinCommonModules = attrValues self.darwinModules ++ [
         # `home-manager` module
         home-manager.darwinModules.home-manager
-        (
-          { config, ... }:
-          let
-            inherit (config.users) primaryUser;
-          in
-          {
+        ({ config, ... }:
+          let inherit (config.users) primaryUser;
+          in {
             nixpkgs = nixpkgsConfig;
             # Hack to support legacy worklows that use `<nixpkgs>` etc.
             # nix.nixPath = { nixpkgs = "${primaryUser.nixConfigDirectory}/nixpkgs.nix"; };
             nix.nixPath = { nixpkgs = "${inputs.nixpkgs-unstable}"; };
             # `home-manager` config
-            users.users.${primaryUser.username}.home = "/Users/${primaryUser.username}";
+            users.users.${primaryUser.username}.home =
+              "/Users/${primaryUser.username}";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${primaryUser.username} = {
@@ -83,12 +82,10 @@
             };
             # Add a registry entry for this flake
             nix.registry.my.flake = self;
-          }
-        )
+          })
       ];
       # }}}
-    in
-    {
+    in {
 
       # My `nix-darwin` configs
       darwinConfigurations = rec {
@@ -101,17 +98,12 @@
 
         stolen = darwinSystem {
           system = "x86_64-darwin";
-          modules = nixDarwinCommonModules ++ [
-            {
-              users.primaryUser = personalUserInfo;
-              networking.computerName = "stolen";
-              networking.hostName = "stolen";
-              networking.knownNetworkServices = [
-                "Wi-Fi"
-                "USB 10/100/1000 LAN"
-              ];
-            }
-          ];
+          modules = nixDarwinCommonModules ++ [{
+            users.primaryUser = personalUserInfo;
+            networking.computerName = "stolen";
+            networking.hostName = "stolen";
+            networking.knownNetworkServices = [ "Wi-Fi" "USB 10/100/1000 LAN" ];
+          }];
         };
       };
 
@@ -137,13 +129,14 @@
         };
 
         # Overlay useful on Macs with Apple Silicon
-        apple-silicon = _: prev: optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
-          # Add access to x86 packages system is running Apple Silicon
-          pkgs-x86 = import inputs.nixpkgs-unstable {
-            system = "x86_64-darwin";
-            inherit (nixpkgsConfig) config;
+        apple-silicon = _: prev:
+          optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
+            # Add access to x86 packages system is running Apple Silicon
+            pkgs-x86 = import inputs.nixpkgs-unstable {
+              system = "x86_64-darwin";
+              inherit (nixpkgsConfig) config;
+            };
           };
-        };
       };
 
       darwinModules = {
@@ -170,8 +163,9 @@
         # programs-neovim-extras = import ./modules/home/programs/neovim/extras.nix;
         # programs-kitty-extras = import ./modules/home/programs/kitty/extras.nix;
         home-user-info = { lib, ... }: {
-          options.home.user-info =
-            (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
+          options.home.user-info = (self.darwinModules.users-primaryUser {
+            inherit lib;
+          }).options.users.primaryUser;
         };
       };
       # }}}

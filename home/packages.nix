@@ -23,6 +23,10 @@
 
   home.packages = with pkgs;
     [
+      # EDITOR
+      helix
+      nil
+      
       # Some basics
       # abduco # lightweight session management
       # awscli2
@@ -39,7 +43,6 @@
       # du-dust # fancy version of `du`
       # eza # fancy version of `ls`
       # fd # fancy version of `find`
-      helix
       htop # fancy version of `top`
       # hyperfine # benchmarking tool
       jpegoptim
