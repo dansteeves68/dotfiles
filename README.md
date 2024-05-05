@@ -58,7 +58,7 @@ Note: quoting the `.#...` references required when I set up prezto.
 
 - Oh-my-zsh prompt - want two lines with date/time
 - Documentation for darwin options like home manager `man 5 configuration.nix`?
-- Kitty configuration in nix
+- Done-ish: Kitty configuration in nix
 - Helix configuration in nix
 - Kitty/Helix font
 - Done: Test mac options like autohide dock
