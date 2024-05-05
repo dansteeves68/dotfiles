@@ -1,4 +1,11 @@
 {
+
+  system.activationScripts.postUserActivation.text = ''
+    # Following line should allow us to avoid a logout/login cycle
+    /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    killall Dock
+  '';
+
   # What the hell is "NSGlobalDomain"?
   system.defaults.NSGlobalDomain = {
     # "com.apple.trackpad.scaling" = 3.0;
@@ -41,7 +48,7 @@
     show-process-indicators = true;
     show-recents = false;
     showhidden = false; # Whether to make icons of hidden applications tranclucent. The default is false.
-    # static-only = true; # Show only open applications in the Dock
+    static-only = true; # Show only open applications in the Dock
     tilesize = 64; # Size of the icons in the dock. The default is 64.
     wvous-bl-corner = 1; # Hot corner action 1 Disabled
     wvous-br-corner = 1; # Hot corner action 1 Disabled

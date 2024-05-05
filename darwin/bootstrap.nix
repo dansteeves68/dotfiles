@@ -36,6 +36,8 @@
   ];
 
   environment.variables.SHELL = "${pkgs.zsh}/bin/zsh";
+  environment.variables.HOMEBREW_AUTO_UPDATE_SECS = "3600";
+  environment.variables.KITTY_CONFIG_DIR = "~/dotfiles/kitty";
 
   # Install and setup ZSH to work with nix(-darwin) as well
   programs.bash.enable = true;
