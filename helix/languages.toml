@@ -1,0 +1,8 @@
+[[language]]
+name = "nix"
+auto-format = true
+formatter = { command = "nixfmt", args = [] }
+
+[[language]]
+name = "markdown"
+file-types = ["md"]

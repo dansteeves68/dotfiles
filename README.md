@@ -33,6 +33,11 @@ For now just link to the config file `ln -s ~/.config/kitty ~/dotfiles/kitty`.
 
 Reminder: Edit config in kitty using Command-, and reload the config after using Ctrl-Cmd-,
 
+### Helix
+
+Using helix from pkgs, but config via `ln -s ~/.config/helix ~/dotfiles/helix`. Mostly because for now
+I don't want the hassle of rebuilding as I build this out. Maybe move to nix params later.
+
 ### Moom
 
 Todo: Add link for preferences folder?
@@ -53,6 +58,7 @@ nix build ".#darwinConfigurations.stolen.system"
 ```
 
 Note: quoting the `.#...` references required when I set up prezto.
+Note: enable `killall Dock` when working on Dock preferences.
 
 ## Todo
 
