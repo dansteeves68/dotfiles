@@ -25,8 +25,9 @@
     [
       # EDITOR
       helix
-      nil
-      
+      nil # for nix
+      taplo # for toml
+
       # Some basics
       # abduco # lightweight session management
       # awscli2

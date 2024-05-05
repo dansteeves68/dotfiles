@@ -58,6 +58,7 @@ nix build ".#darwinConfigurations.stolen.system"
 ```
 
 Note: quoting the `.#...` references required when I set up prezto.
+Note: enable `killall Dock` when working on Dock preferences.
 
 ## Todo
 
