@@ -25,8 +25,13 @@
     [
       # EDITOR
       helix
+      marksman # for markdown
       nil # for nix
+      nodePackages.bash-language-server
+      nodePackages.vscode-json-languageserver
       taplo # for toml
+      terraform-ls
+      yaml-language-server
 
       # Some basics
       # abduco # lightweight session management
