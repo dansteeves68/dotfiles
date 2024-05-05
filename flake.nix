@@ -152,16 +152,10 @@
 
       homeManagerModules = {
         # My configurations
-        # dan-colors = import ./home/colors.nix;
-        dan-config-files = import ./home/config-files.nix;
         dan-zsh = import ./home/zsh.nix;
         dan-git = import ./home/git.nix;
         dan-packages = import ./home/packages.nix;
 
-        # Modules I've created
-        # colors = import ./modules/home/colors;
-        # programs-neovim-extras = import ./modules/home/programs/neovim/extras.nix;
-        # programs-kitty-extras = import ./modules/home/programs/kitty/extras.nix;
         home-user-info = { lib, ... }: {
           options.home.user-info = (self.darwinModules.users-primaryUser {
             inherit lib;
