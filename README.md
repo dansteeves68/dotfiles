@@ -2,20 +2,42 @@
 
 Thanks to [nix-darwin](https://github.com/LnL7/nix-darwin), many things are in one file.
 
-## Bootstrap New Machine
+## Todo
 
+- Move Moom config to dotfiles?
+
+## Bootstrap New MacOS Machine
+
+- Set up iCloud
+- Login to 1Password web
+- Login to GitHub
 - Generate ssh key
-- Login to 1password web
 - Add ssh key to GitHub
 - Clone dot files (wait for installation of developer tools)
 - Install nix
+  + Determinate systems installer https://github.com/DeterminateSystems/nix-installer
 - Install homebrew
 - Build dot files
-  + `nix build ".#darwinConfigurations.stolen.system" --extra-experimental-features nix-command --extra-experimental-features flakes`
+  + `nix build ".#darwinConfigurations.stolen.system"`
 - Rebuild
   + `./result/sw/bin/darwin-rebuild switch --flake ".#stolen"`
+- Set up links for Kitty and Helix config files
+- Continue with applications setup below
 
 ## Set up applications
+
+### Kitty
+
+I tried using home manager `programs.kitty` but was not able to get it launchable from Alfred. :(.
+
+For now just link to the config file `ln -s ~/dotfiles/kitty ~/.config/kitty`.
+
+Reminder: Edit config in kitty using Command-, and reload the config after using Ctrl-Cmd-,
+
+### Helix
+
+Using helix from pkgs, but config via `ln -s ~/dotfiles/helix ~/.config/helix`. Mostly because for now
+I don't want the hassle of rebuilding as I build this out. Maybe move to nix params later.
 
 ### 1Password
 
@@ -25,22 +47,21 @@ Launch, login, install Safari extension, follow instructions. Set "Open Quick Ac
 
 Launch, enter license powerpack, grant permissions. Then use Settings -> Advanced -> Set preferences folder... to point at `~/dotfiles/Alfred/`.
 
-### Kitty
-
-I tried using home manager `programs.kitty` but was not able to get it launchable from Alfred. :(.
-
-For now just link to the config file `ln -s ~/.config/kitty ~/dotfiles/kitty`.
-
-Reminder: Edit config in kitty using Command-, and reload the config after using Ctrl-Cmd-,
-
-### Helix
-
-Using helix from pkgs, but config via `ln -s ~/.config/helix ~/dotfiles/helix`. Mostly because for now
-I don't want the hassle of rebuilding as I build this out. Maybe move to nix params later.
-
 ### Moom
 
-Todo: Add link for preferences folder?
+Launch and set up:
+
+- Separate windows by 4 pt and apply to screen edges
+- Launch automatically on login
+- Run as menu bar application
+- Set Shift-Ctrl-Opt-Cmd-M as hot key
+- Set up thirds and full-ish 1-4 quick sizes
+
+License: Download and double-click license file from 1Password
+
+### Day One
+
+Install from Mac App Store.
 
 ## More Preferences and Setup
 

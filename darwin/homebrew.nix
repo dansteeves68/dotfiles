@@ -18,8 +18,6 @@ in {
   homebrew.global.lockfiles = true;
 
   homebrew.taps = [
-    "homebrew/cask-fonts"
-    "homebrew/cask-versions"
     "homebrew/services"
     "nrlquaker/createzap"
   ];
@@ -57,7 +55,6 @@ in {
     "moom"
     "netnewswire"
     "omnigraffle"
-    "opencore-patcher"
     "orion"
     "soulver"
     "tower"
