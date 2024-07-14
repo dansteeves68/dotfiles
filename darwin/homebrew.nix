@@ -17,10 +17,7 @@ in {
   homebrew.global.brewfile = true;
   homebrew.global.lockfiles = true;
 
-  homebrew.taps = [
-    "homebrew/services"
-    "nrlquaker/createzap"
-  ];
+  homebrew.taps = [ "homebrew/services" "nrlquaker/createzap" ];
 
   # Prefer installing application from the Mac App Store
   #
@@ -53,10 +50,12 @@ in {
     "kitty"
     "marked"
     "moom"
+    "multiviewer-for-f1"
     "netnewswire"
     "omnigraffle"
     "orion"
     "soulver"
+    "steermouse"
     "tower"
     # "transmit"
     "zoom"
@@ -67,10 +66,9 @@ in {
   else
     [ ]);
 
-
   # For cli packages that aren't currently available for macOS in `nixpkgs`.Packages should be
   # installed in `../home/default.nix` whenever possible.
-  homebrew.brews = [ 
+  homebrew.brews = [
     # "astro" 
   ];
 }
