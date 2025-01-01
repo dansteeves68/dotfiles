@@ -6,7 +6,7 @@ in {
   programs.zsh = {
     autocd = true;
     enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     defaultKeymap = "viins"; # emacs, vicmd, or viins
     history = {
@@ -21,10 +21,12 @@ in {
     };
     prezto = {
       enable = true;
-      autosuggestions.color = "fg=magenta"; # Set the query found color. Type: null or string Default: null Example: "fg=blue" Declared by: <home-manager/modules/programs/zsh/prezto.nix>
+      autosuggestions.color =
+        "fg=magenta"; # Set the query found color. Type: null or string Default: null Example: "fg=blue" Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       caseSensitive =
         false; # Set case-sensitivity for completion, history lookup, etc. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
-      color = true; # Color output (auto set to 'no' on dumb terminals) Type: null or boolean Default: true Example: false Declared by: <home-manager/modules/programs/zsh/prezto.nix>
+      color =
+        true; # Color output (auto set to 'no' on dumb terminals) Type: null or boolean Default: true Example: false Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # completions.ignoredHosts = ; # Set the entries to ignore in static */etc/hosts* for host completion. Type: list of string Default: [ ] Example: [ "0.0.0.0" "127.0.0.1" ] Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       # editor.dotExpansion = ; # Auto convert .... to ../.. Type: null or boolean Default: null Example: true Declared by: <home-manager/modules/programs/zsh/prezto.nix>
       editor.keymap =

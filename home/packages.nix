@@ -76,7 +76,7 @@
       cachix # adding/managing alternative binary caches hosted by Cachix
       comma # run software from without installing it
       niv # easy dependency management for nix projects
-      nixfmt # format nix files
+      nixfmt-rfc-style # format nix files
       nix-tree # interactively browse dependency graphs of Nix derivations
       nix-update # swiss-knife for updating nix packages
       nixpkgs-review # review pull-requests on nixpkgs
