@@ -23,6 +23,7 @@
 
   home.packages = with pkgs;
     [
+      anonymousPro
       # EDITOR
       helix
       marksman # for markdown
@@ -37,7 +38,7 @@
       # abduco # lightweight session management
       # awscli2
       # bandwhich # display current network utilization by process
-      black
+      # black
       # bottom # fancy version of `top` with ASCII graphs
       # browsh # in terminal browser
       coreutils
@@ -61,7 +62,7 @@
       openssh
       pandoc
       # parallel # runs commands in parallel
-      poetry
+      # poetry
       # ranger
       ripgrep
       # tealdeer # rust implementation of `tldr`
@@ -75,12 +76,14 @@
       cachix # adding/managing alternative binary caches hosted by Cachix
       comma # run software from without installing it
       niv # easy dependency management for nix projects
-      nixfmt # format nix files
+      nixfmt-rfc-style # format nix files
       nix-tree # interactively browse dependency graphs of Nix derivations
       nix-update # swiss-knife for updating nix packages
       nixpkgs-review # review pull-requests on nixpkgs
       # nodePackages.node2nix
       statix # lints and suggestions for the Nix programming language
+
+      uv
 
     ] ++ lib.optionals stdenv.isDarwin [
       m-cli # useful macOS CLI commands
