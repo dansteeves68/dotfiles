@@ -1,4 +1,7 @@
-# Dan's macOS Dotfiles
+# Dan's macOS Dotfiles (until 2024)
+
+Note: As of January 2025 I have moved to a simpler flake, see https://github.com/dansteeves68/nix.
+If you are just starting out and you want to copy something, I suggest you start there.
 
 Thanks to [nix-darwin](https://github.com/LnL7/nix-darwin), many things are in one file.
 
@@ -15,12 +18,12 @@ Thanks to [nix-darwin](https://github.com/LnL7/nix-darwin), many things are in o
 - Add ssh key to GitHub
 - Clone dot files (wait for installation of developer tools)
 - Install nix
-  + Determinate systems installer https://github.com/DeterminateSystems/nix-installer
+  - Determinate systems installer https://github.com/DeterminateSystems/nix-installer
 - Install homebrew
 - Build dot files
-  + `nix build ".#darwinConfigurations.stolen.system"`
+  - `nix build ".#darwinConfigurations.stolen.system"`
 - Rebuild
-  + `./result/sw/bin/darwin-rebuild switch --flake ".#stolen"`
+  - `./result/sw/bin/darwin-rebuild switch --flake ".#stolen"`
 - Set up links for Kitty and Helix config files
 - Continue with applications setup below
 
@@ -36,8 +39,8 @@ Reminder: Edit config in kitty using Command-, and reload the config after using
 
 ### Helix
 
-Using helix from pkgs, but config via `ln -s ~/dotfiles/helix ~/.config/helix`. Mostly because for now
-I don't want the hassle of rebuilding as I build this out. Maybe move to nix params later.
+Using helix from pkgs, but config via `ln -s ~/dotfiles/helix ~/.config/helix`. Mostly because for
+now I don't want the hassle of rebuilding as I build this out. Maybe move to nix params later.
 
 ### 1Password
 
@@ -45,7 +48,8 @@ Launch, login, install Safari extension, follow instructions. Set "Open Quick Ac
 
 ### Alfred
 
-Launch, enter license powerpack, grant permissions. Then use Settings -> Advanced -> Set preferences folder... to point at `~/dotfiles/Alfred/`.
+Launch, enter license powerpack, grant permissions. Then use Settings -> Advanced -> Set preferences
+folder... to point at `~/dotfiles/Alfred/`.
 
 ### Moom
 
@@ -78,8 +82,8 @@ nix build ".#darwinConfigurations.stolen.system"
 ./result/sw/bin/darwin-rebuild switch --flake ".#stolen"
 ```
 
-Note: quoting the `.#...` references required when I set up prezto.
-Note: enable `killall Dock` when working on Dock preferences.
+Note: quoting the `.#...` references required when I set up prezto. Note: enable `killall Dock` when
+working on Dock preferences.
 
 ## Todo
 
@@ -90,4 +94,3 @@ Note: enable `killall Dock` when working on Dock preferences.
 - Kitty/Helix font
 - Done: Test mac options like autohide dock
 - Can I add Logitech options from brew?
-
