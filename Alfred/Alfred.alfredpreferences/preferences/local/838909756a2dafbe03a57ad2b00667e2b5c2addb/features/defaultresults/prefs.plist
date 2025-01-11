@@ -7,6 +7,8 @@
 		<string>/Applications/Xcode.app/Contents/Applications</string>
 		<string>/Developer/Applications</string>
 		<string>/Library/PreferencePanes</string>
+		<string>/nix/store/1lz93y7nky5gsdkhx4m13chcv4hxjf4s-home-manager-applications/Applications</string>
+		<string>/nix/store/byiymj344lghv3l0a2vgh85wwfmnr3gg-system-applications/Applications</string>
 		<string>/opt/homebrew/Cellar</string>
 		<string>/System/Library/CoreServices/Applications</string>
 		<string>/System/Library/PreferencePanes</string>
